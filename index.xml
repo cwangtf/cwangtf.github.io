@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Php Alg Sort</title>
+      <title>PHP实现四种基本排序算法</title>
       <link>https://cwangtf.github.io/php-alg-sort/</link>
       <pubDate>Wed, 27 Jun 2018 23:02:24 +0800</pubDate>
       
@@ -27,7 +27,7 @@ function selectSort($arr) { //双重循环完成，外层控制轮数，内层�
     </item>
     
     <item>
-      <title>Linux Vim Replace</title>
+      <title>vim 批量查找替换</title>
       <link>https://cwangtf.github.io/linux-vim-replace/</link>
       <pubDate>Tue, 26 Jun 2018 23:04:56 +0800</pubDate>
       
