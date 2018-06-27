@@ -1,57 +1,142 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.42.1" />
-
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>Linux Vim Replace &middot; 静晓晨曦的博客</title>
-
-  
-  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.42.1" />
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
 
-  
-  <link href="" rel="alternate" type="application/rss+xml" title="静晓晨曦的博客" />
+<link rel="canonical" href="https://cwangtf.github.io/linux-vim-replace/">
 
-  
-</head>
 
-  <body class=" ">
-  <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://cwangtf.github.io/"><h1>静晓晨曦的博客</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Linux Vim Replace - 静晓晨曦的博客</title>
+    
+<meta name="description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
 
-    <ul class="sidebar-nav">
-      <li><a href="https://cwangtf.github.io/">Home</a> </li>
+<meta property="og:title" content="Linux Vim Replace - 静晓晨曦的博客">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cwangtf.github.io/linux-vim-replace/">
+<meta property="og:image" content="https://cwangtf.github.io/images/default.png">
+<meta property="og:site_name" content="静晓晨曦的博客">
+<meta property="og:description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="静晓晨曦的博客">
+<meta name="twitter:url" content="https://cwangtf.github.io/linux-vim-replace/">
+<meta name="twitter:title" content="Linux Vim Replace - 静晓晨曦的博客">
+<meta name="twitter:description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
+<meta name="twitter:image" content="https://cwangtf.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https://cwangtf.github.io/"
+    },
+    "headline": "Linux Vim Replace - 静晓晨曦的博客",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://cwangtf.github.io/images/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2018-06-26T23:04:56JST",
+    "dateModified": "2018-06-26T23:04:56JST",
+    "author": {
+      "@type": "Person",
+      "name": "静晓晨曦的博客"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "静晓晨曦的博客",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cwangtf.github.io/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "###vim批量查找替换
+当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
+全局替换:% s/XXX/YYY/g.
+对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.
+或指定行范围 替换::100, 102s/XXX/YYY/g.
+替换字符串中的&rdquo;/&rdquo; 用&rdquo;\&ldquo;转义，即用&rdquo;\/&ldquo;表示。
+查找在：中输入？ 或／ ，然后按n或N向后或向前查找
+####vi指令大全
+#####进入vi的命令
+vi filename: 打开或新建文件，并将光标置于第一行首 vi +n filename: 打开文件，并将光标置于第n行首 vi + filename: 打开文件，并将光标置于最后一行首 vi +/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令
+h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl+p: 光标上移一行 j或Ctrl+n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n+: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令"
+  }
+</script>
+
+
+    <link href="https://cwangtf.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://cwangtf.github.io/">静晓晨曦的博客</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://cwangtf.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li class="active">Linux Vim Replace</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-26T23:04:56JST">Jun 26, 2018</time></li>
+      
       
     </ul>
 
-    <p>&copy; 2018. All rights reserved. </p>
-  </div>
-</div>
+    <h1 class="title">Linux Vim Replace</h1>
+  </header>
 
-    <div class="content container">
-    <div class="post">
-  <h1>Linux Vim Replace</h1>
-  <span class="post-date">Tue, Jun 26, 2018</span>
-  <p>###vim批量查找替换</p>
+  
+
+  <div class="article-body"><p>###vim批量查找替换</p>
 
 <p>当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。</p>
 
@@ -250,12 +335,89 @@ mesg: 允许vi显示其他用户用write写到自己终端上的信息
 
 ndd: 将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中
 </code></pre>
-
 </div>
 
+  <footer class="article-footer">
+    
+    
+    
+    
+    
+    
+  </footer>
 
-    </div>
+</article>
+
 
     
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://cwangtf.github.io/php-alg-sort/" class="list-group-item">Php Alg Sort</a>
+      
+      <a href="https://cwangtf.github.io/linux-vim-replace/" class="list-group-item">Linux Vim Replace</a>
+      
+      <a href="https://cwangtf.github.io/categories/" class="list-group-item">Categories</a>
+      
+      <a href="https://cwangtf.github.io/tags/" class="list-group-item">Tags</a>
+      
+      <a href="https://cwangtf.github.io/" class="list-group-item">静晓晨曦的博客</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy; 静晓晨曦的博客</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
+
