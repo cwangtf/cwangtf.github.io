@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.42.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Php Alg Sort &middot; 静晓晨曦的博客</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://cwangtf.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="静晓晨曦的博客" />
+
+  
+</head>
+
+  <body class=" ">
+  <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://cwangtf.github.io/"><h1>静晓晨曦的博客</h1></a>
+      <p class="lead">
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="https://cwangtf.github.io/">Home</a> </li>
+      
+    </ul>
+
+    <p>&copy; 2018. All rights reserved. </p>
+  </div>
+</div>
+
+    <div class="content container">
+    <div class="post">
+  <h1>Php Alg Sort</h1>
+  <span class="post-date">Wed, Jun 27, 2018</span>
+  <p>####1.冒泡排序</p>
+
+<p>思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。</p>
+
+<p>代码实现：</p>
+
+<pre><code>$arr=array(1,43,54,62,21,66,32,78,36,76,39);  
+function bubbleSort($arr)
+{  
+  $len=count($arr);
+  //该层循环控制 需要冒泡的轮数
+  for($i=1;$i&lt;$len;$i++)
+  { //该层循环用来控制每轮 冒出一个数 需要比较的次数
+    for($k=0;$k&lt;$len-$i;$k++)
+    {
+       if($arr[$k]&gt;$arr[$k+1])
+        {
+            $tmp=$arr[$k+1];
+            $arr[$k+1]=$arr[$k];
+            $arr[$k]=$tmp;
+        }
+    }
+  }
+  return $arr;
+}
+</code></pre>
+
+<p>####2.选择排序</p>
+
+<p>思路分析：在要排序的一组数中，选出最小的一个数与第一个位置的数交换。然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。</p>
+
+<p>代码实现：</p>
+
+<pre><code>function selectSort($arr) {
+//双重循环完成，外层控制轮数，内层控制比较次数
+ $len=count($arr);
+    for($i=0; $i&lt;$len-1; $i++) {
+        //先假设最小的值的位置
+        $p = $i;
+
+        for($j=$i+1; $j&lt;$len; $j++) {
+            //$arr[$p] 是当前已知的最小值
+            if($arr[$p] &gt; $arr[$j]) {
+            //比较，发现更小的,记录下最小值的位置；并且在下次比较时采用已知的最小值进行比较。
+                $p = $j;
+            }
+        }
+        //已经确定了当前的最小值的位置，保存到$p中。如果发现最小值的位置与当前假设的位置$i不同，则位置互换即可。
+        if($p != $i) {
+            $tmp = $arr[$p];
+            $arr[$p] = $arr[$i];
+            $arr[$i] = $tmp;
+        }
+    }
+    //返回最终结果
+    return $arr;
+}
+</code></pre>
+
+<p>####3.插入排序</p>
+
+<p>思路分析：在要排序的一组数中，假设前面的数已经是排好顺序的，现在要把第n个数插到前面的有序数中，使得这n个数也是排好顺序的。如此反复循环，直到全部排好顺序。</p>
+
+<p>代码实现：</p>
+
+<pre><code>function insertSort($arr) {
+    $len=count($arr); 
+    for($i=1, $i&lt;$len; $i++) {
+        $tmp = $arr[$i];
+        //内层循环控制，比较并插入
+        for($j=$i-1;$j&gt;=0;$j--) {
+            if($tmp &lt; $arr[$j]) {
+                //发现插入的元素要小，交换位置，将后边的元素与前面的元素互换
+                $arr[$j+1] = $arr[$j];
+                $arr[$j] = $tmp;
+            } else {
+                //如果碰到不需要移动的元素，由于是已经排序好是数组，则前面的就不需要再次比较了。
+                break;
+            }
+        }
+    }
+    return $arr;
+}
+</code></pre>
+
+<p>####4.快速排序</p>
+
+<p>思路分析：选择一个基准元素，通常选择第一个元素或者最后一个元素。通过一趟扫描，将待排序列分成两部分，一部分比基准元素小，一部分大于等于基准元素。此时基准元素在其排好序后的正确位置，然后再用同样的方法递归地排序划分的两部分。</p>
+
+<p>代码实现：</p>
+
+<pre><code>function quickSort($arr) {
+    //先判断是否需要继续进行
+    $length = count($arr);
+    if($length &lt;= 1) {
+        return $arr;
+    }
+    //选择第一个元素作为基准
+    $base_num = $arr[0];
+    //遍历除了标尺外的所有元素，按照大小关系放入两个数组内
+    //初始化两个数组
+    $left_array = array();  //小于基准的
+    $right_array = array();  //大于基准的
+    for($i=1; $i&lt;$length; $i++) {
+        if($base_num &gt; $arr[$i]) {
+            //放入左边数组
+            $left_array[] = $arr[$i];
+        } else {
+            //放入右边
+            $right_array[] = $arr[$i];
+        }
+    }
+    //再分别对左边和右边的数组进行相同的排序处理方式递归调用这个函数
+    $left_array = quick_sort($left_array);
+    $right_array = quick_sort($right_array);
+    //合并
+    return array_merge($left_array, array($base_num), $right_array);
+}
+</code></pre>
+
+</div>
+
+
+    </div>
+
+    
+  </body>
+</html>
