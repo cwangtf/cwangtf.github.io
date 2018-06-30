@@ -14,23 +14,23 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>vim 批量查找替换 - 静晓晨曦的博客</title>
+    <title>vim 批量查找替换 - icodego</title>
     
-<meta name="description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
+<meta name="description" content="vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  移动光标类命令 h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  屏幕翻滚类命令 Ctrl&#43;u: 向文件首翻半屏 Ctrl&#43;d: 向文件尾翻半屏 Ctrl&#43;f: 向文件尾翻一屏 Ctrl＋b: 向文件首翻一屏 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。  插入文本类命令 i: 在光标前 I: 在当前行首 a: 光标后 A: 在当前行尾 o: 在当前行之下新开一行 O: 在当前行之上新开一行 r: 替换当前字符 R: 替换当前字符及其后的字符，直至按ESC键 s: 从当前光标位置处开始，以输入的文本替代指定数目的字符 S: 删除指定数目的行，并以所输入文本代替之 ncw或nCW: 修改指定数目的字 nCC: 修改指定数目的行  删除命令 ndw或ndW: 删除光标处开始及其后的n-1个字 do: 删至行首 d$: 删至行尾 ndd: 删除当前行及其后n-1行 x或X: 删除一个字符，x删除光标后的，而X删除光标前的 Ctrl&#43;u: 删除输入方式下所输入的文本  搜索及替换命令 /pattern: 从光标开始处向文件尾搜索pattern ?">
 
-<meta property="og:title" content="vim 批量查找替换 - 静晓晨曦的博客">
+<meta property="og:title" content="vim 批量查找替换 - icodego">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://cwangtf.github.io/linux-vim-replace/">
 <meta property="og:image" content="https://cwangtf.github.io/images/default.png">
-<meta property="og:site_name" content="静晓晨曦的博客">
-<meta property="og:description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
+<meta property="og:site_name" content="icodego">
+<meta property="og:description" content="vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  移动光标类命令 h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  屏幕翻滚类命令 Ctrl&#43;u: 向文件首翻半屏 Ctrl&#43;d: 向文件尾翻半屏 Ctrl&#43;f: 向文件尾翻一屏 Ctrl＋b: 向文件首翻一屏 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。  插入文本类命令 i: 在光标前 I: 在当前行首 a: 光标后 A: 在当前行尾 o: 在当前行之下新开一行 O: 在当前行之上新开一行 r: 替换当前字符 R: 替换当前字符及其后的字符，直至按ESC键 s: 从当前光标位置处开始，以输入的文本替代指定数目的字符 S: 删除指定数目的行，并以所输入文本代替之 ncw或nCW: 修改指定数目的字 nCC: 修改指定数目的行  删除命令 ndw或ndW: 删除光标处开始及其后的n-1个字 do: 删至行首 d$: 删至行尾 ndd: 删除当前行及其后n-1行 x或X: 删除一个字符，x删除光标后的，而X删除光标前的 Ctrl&#43;u: 删除输入方式下所输入的文本  搜索及替换命令 /pattern: 从光标开始处向文件尾搜索pattern ?">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="静晓晨曦的博客">
+<meta name="twitter:site" content="icodego">
 <meta name="twitter:url" content="https://cwangtf.github.io/linux-vim-replace/">
-<meta name="twitter:title" content="vim 批量查找替换 - 静晓晨曦的博客">
-<meta name="twitter:description" content="###vim批量查找替换当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找####vi指令大全#####进入vi的命令vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令">
+<meta name="twitter:title" content="vim 批量查找替换 - icodego">
+<meta name="twitter:description" content="vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。全局替换:% s/XXX/YYY/g.对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.或指定行范围 替换::100, 102s/XXX/YYY/g.替换字符串中的&amp;rdquo;/&amp;rdquo; 用&amp;rdquo;\&amp;ldquo;转义，即用&amp;rdquo;\/&amp;ldquo;表示。查找在：中输入？ 或／ ，然后按n或N向后或向前查找vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光标置于第一行首 vi &#43;n filename: 打开文件，并将光标置于第n行首 vi &#43; filename: 打开文件，并将光标置于最后一行首 vi &#43;/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  移动光标类命令 h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl&#43;p: 光标上移一行 j或Ctrl&#43;n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n&#43;: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  屏幕翻滚类命令 Ctrl&#43;u: 向文件首翻半屏 Ctrl&#43;d: 向文件尾翻半屏 Ctrl&#43;f: 向文件尾翻一屏 Ctrl＋b: 向文件首翻一屏 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。  插入文本类命令 i: 在光标前 I: 在当前行首 a: 光标后 A: 在当前行尾 o: 在当前行之下新开一行 O: 在当前行之上新开一行 r: 替换当前字符 R: 替换当前字符及其后的字符，直至按ESC键 s: 从当前光标位置处开始，以输入的文本替代指定数目的字符 S: 删除指定数目的行，并以所输入文本代替之 ncw或nCW: 修改指定数目的字 nCC: 修改指定数目的行  删除命令 ndw或ndW: 删除光标处开始及其后的n-1个字 do: 删至行首 d$: 删至行尾 ndd: 删除当前行及其后n-1行 x或X: 删除一个字符，x删除光标后的，而X删除光标前的 Ctrl&#43;u: 删除输入方式下所输入的文本  搜索及替换命令 /pattern: 从光标开始处向文件尾搜索pattern ?">
 <meta name="twitter:image" content="https://cwangtf.github.io/images/default.png">
 
 
@@ -42,7 +42,7 @@
       "@type": "WebPage",
       "@id":"https://cwangtf.github.io/"
     },
-    "headline": "vim 批量查找替换 - 静晓晨曦的博客",
+    "headline": "vim 批量查找替换 - icodego",
     "image": {
       "@type": "ImageObject",
       "url": "https://cwangtf.github.io/images/default.png",
@@ -53,11 +53,11 @@
     "dateModified": "2018-06-26T23:04:56JST",
     "author": {
       "@type": "Person",
-      "name": "静晓晨曦的博客"
+      "name": "icodego"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "静晓晨曦的博客",
+      "name": "icodego",
       "logo": {
         "@type": "ImageObject",
         "url": "https://cwangtf.github.io/images/logo.png",
@@ -65,17 +65,13 @@
         "height": 60
       }
     },
-    "description": "###vim批量查找替换
-当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
+    "description": "vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
 全局替换:% s/XXX/YYY/g.
 对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.
 或指定行范围 替换::100, 102s/XXX/YYY/g.
 替换字符串中的&rdquo;/&rdquo; 用&rdquo;\&ldquo;转义，即用&rdquo;\/&ldquo;表示。
 查找在：中输入？ 或／ ，然后按n或N向后或向前查找
-####vi指令大全
-#####进入vi的命令
-vi filename: 打开或新建文件，并将光标置于第一行首 vi +n filename: 打开文件，并将光标置于第n行首 vi + filename: 打开文件，并将光标置于最后一行首 vi +/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令
-h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl+p: 光标上移一行 j或Ctrl+n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n+: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令"
+vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光标置于第一行首 vi +n filename: 打开文件，并将光标置于第n行首 vi + filename: 打开文件，并将光标置于最后一行首 vi +/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  移动光标类命令 h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl+p: 光标上移一行 j或Ctrl+n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n+: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  屏幕翻滚类命令 Ctrl+u: 向文件首翻半屏 Ctrl+d: 向文件尾翻半屏 Ctrl+f: 向文件尾翻一屏 Ctrl＋b: 向文件首翻一屏 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。  插入文本类命令 i: 在光标前 I: 在当前行首 a: 光标后 A: 在当前行尾 o: 在当前行之下新开一行 O: 在当前行之上新开一行 r: 替换当前字符 R: 替换当前字符及其后的字符，直至按ESC键 s: 从当前光标位置处开始，以输入的文本替代指定数目的字符 S: 删除指定数目的行，并以所输入文本代替之 ncw或nCW: 修改指定数目的字 nCC: 修改指定数目的行  删除命令 ndw或ndW: 删除光标处开始及其后的n-1个字 do: 删至行首 d$: 删至行尾 ndd: 删除当前行及其后n-1行 x或X: 删除一个字符，x删除光标后的，而X删除光标前的 Ctrl+u: 删除输入方式下所输入的文本  搜索及替换命令 /pattern: 从光标开始处向文件尾搜索pattern ?"
   }
 </script>
 
@@ -100,7 +96,7 @@ h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一�
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://cwangtf.github.io/">静晓晨曦的博客</a>
+            <a class="navbar-brand" href="https://cwangtf.github.io/">icodego</a>
           </div>
 
           
@@ -136,7 +132,9 @@ h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一�
 
   
 
-  <div class="article-body"><p>###vim批量查找替换</p>
+  <div class="article-body">
+
+<h3 id="vim批量查找替换">vim批量查找替换</h3>
 
 <p>当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。</p>
 
@@ -150,9 +148,9 @@ h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一�
 
 <p>查找在：中输入？ 或／ ，然后按n或N向后或向前查找</p>
 
-<p>####vi指令大全</p>
+<h4 id="vi指令大全">vi指令大全</h4>
 
-<p>#####进入vi的命令</p>
+<h5 id="进入vi的命令">进入vi的命令</h5>
 
 <pre><code>vi filename: 打开或新建文件，并将光标置于第一行首
 
@@ -167,7 +165,7 @@ vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename
 vi filename....filename: 打开多个文件，依次进行编辑
 </code></pre>
 
-<p>#####移动光标类命令</p>
+<h5 id="移动光标类命令">移动光标类命令</h5>
 
 <pre><code>h: 光标左移一个字符
 
@@ -216,7 +214,7 @@ L: 光标移至屏幕最后行
 $: 光标移至当前行尾
 </code></pre>
 
-<p>#####屏幕翻滚类命令</p>
+<h5 id="屏幕翻滚类命令">屏幕翻滚类命令</h5>
 
 <pre><code>Ctrl+u: 向文件首翻半屏
 
@@ -229,7 +227,7 @@ Ctrl＋b: 向文件首翻一屏
 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。
 </code></pre>
 
-<p>#####插入文本类命令</p>
+<h5 id="插入文本类命令">插入文本类命令</h5>
 
 <pre><code>i: 在光标前
 
@@ -256,7 +254,7 @@ ncw或nCW: 修改指定数目的字
 nCC: 修改指定数目的行
 </code></pre>
 
-<p>#####删除命令</p>
+<h5 id="删除命令">删除命令</h5>
 
 <pre><code>ndw或ndW: 删除光标处开始及其后的n-1个字
 
@@ -271,7 +269,7 @@ x或X: 删除一个字符，x删除光标后的，而X删除光标前的
 Ctrl+u: 删除输入方式下所输入的文本
 </code></pre>
 
-<p>#####搜索及替换命令</p>
+<h5 id="搜索及替换命令">搜索及替换命令</h5>
 
 <pre><code>/pattern: 从光标开始处向文件尾搜索pattern
 ?pattern: 从光标开始处向文件首搜索pattern
@@ -282,7 +280,7 @@ N: 在反方向上重复上一次搜索命令
 :g/p1/s//p2/g: 将文件中所有p1均用p2替换
 </code></pre>
 
-<p>#####选项设置</p>
+<h5 id="选项设置">选项设置</h5>
 
 <pre><code>all: 列出所有选项设置情况
 
@@ -307,7 +305,7 @@ nowrapscan: 禁止vi在搜索到达文件两端时，又从另一端开始
 mesg: 允许vi显示其他用户用write写到自己终端上的信息
 </code></pre>
 
-<p>#####最后行方式命令</p>
+<h5 id="最后行方式命令">最后行方式命令</h5>
 
 <pre><code>:n1,n2 co n3: 将n1行到n2行之间的内容拷贝到第n3行下
 :n1,n2 m n3:将n1行到n2行之间的内容移至到第n3行下
@@ -323,7 +321,7 @@ mesg: 允许vi显示其他用户用write写到自己终端上的信息
 :r!command: 将命令command的输出结果放到当前行
 </code></pre>
 
-<p>#####寄存器操作</p>
+<h5 id="寄存器操作">寄存器操作</h5>
 
 <pre><code>&quot;?nyy: 将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字
 
@@ -370,7 +368,7 @@ ndd: 将当前行及其下共n行文本删除，并将所删内容放到1号删�
       
       <a href="https://cwangtf.github.io/tags/" class="list-group-item">Tags</a>
       
-      <a href="https://cwangtf.github.io/" class="list-group-item">静晓晨曦的博客</a>
+      <a href="https://cwangtf.github.io/" class="list-group-item">icodego</a>
       
     </div>
   </section>
@@ -406,11 +404,7 @@ ndd: 将当前行及其下共n行文本删除，并将所删内容放到1号删�
 
     <footer class="l-footer">
       <div class="container">
-        <p><span class="h-logo">&copy; 静晓晨曦的博客</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
+        <p><span class="h-logo">&copy;2018 icodego</span></p>
       </div>
     </footer>
 

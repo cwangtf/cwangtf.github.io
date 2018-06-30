@@ -14,7 +14,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>静晓晨曦的博客</title>
+    <title>icodego</title>
     
     <link href="https://cwangtf.github.io/css/styles.css" rel="stylesheet">
     
@@ -36,7 +36,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://cwangtf.github.io/">静晓晨曦的博客</a>
+            <a class="navbar-brand" href="https://cwangtf.github.io/">icodego</a>
           </div>
 
           
@@ -66,13 +66,11 @@
   </header>
 
   
-  <div class="summary">####1.冒泡排序
-思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
+  <div class="summary">1.冒泡排序 思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
 代码实现：
-$arr=array(1,43,54,62,21,66,32,78,36,76,39); function bubbleSort($arr) { $len=count($arr); //该层循环控制 需要冒泡的轮数 for($i=1;$i&lt;$len;$i++) { //该层循环用来控制每轮 冒出一个数 需要比较的次数 for($k=0;$k&lt;$len-$i;$k++) { if($arr[$k]&gt;$arr[$k+1]) { $tmp=$arr[$k+1]; $arr[$k+1]=$arr[$k]; $arr[$k]=$tmp; } } } return $arr; }  ####2.选择排序
-思路分析：在要排序的一组数中，选出最小的一个数与第一个位置的数交换。然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。
+$arr=array(1,43,54,62,21,66,32,78,36,76,39); function bubbleSort($arr) { $len=count($arr); //该层循环控制 需要冒泡的轮数 for($i=1;$i&lt;$len;$i++) { //该层循环用来控制每轮 冒出一个数 需要比较的次数 for($k=0;$k&lt;$len-$i;$k++) { if($arr[$k]&gt;$arr[$k+1]) { $tmp=$arr[$k+1]; $arr[$k+1]=$arr[$k]; $arr[$k]=$tmp; } } } return $arr; }  2.选择排序 思路分析：在要排序的一组数中，选出最小的一个数与第一个位置的数交换。然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。
 代码实现：
-function selectSort($arr) { //双重循环完成，外层控制轮数，内层控制比较次数 $len=count($arr); for($i=0; $i&lt;$len-1; $i++) { //先假设最小的值的位置 $p = $i; for($j=$i+1; $j&lt;$len; $j++) { //$arr[$p] 是当前已知的最小值 if($arr[$p] &gt; $arr[$j]) { //比较，发现更小的,记录下最小值的位置；并且在下次比较时采用已知的最小值进行比较。 $p = $j; } } //已经确定了当前的最小值的位置，保存到$p中。如果发现最小值的位置与当前假设的位置$i不同，则位置互换即可。 if($p != $i) { $tmp = $arr[$p]; $arr[$p] = $arr[$i]; $arr[$i] = $tmp; } } //返回最终结果 return $arr; }  ####3.</div>
+function selectSort($arr) { //双重循环完成，外层控制轮数，内层控制比较次数 $len=count($arr); for($i=0; $i&lt;$len-1; $i++) { //先假设最小的值的位置 $p = $i; for($j=$i+1; $j&lt;$len; $j++) { //$arr[$p] 是当前已知的最小值 if($arr[$p] &gt; $arr[$j]) { //比较，发现更小的,记录下最小值的位置；并且在下次比较时采用已知的最小值进行比较。 $p = $j; } } //已经确定了当前的最小值的位置，保存到$p中。如果发现最小值的位置与当前假设的位置$i不同，则位置互换即可。 if($p != $i) { $tmp = $arr[$p]; $arr[$p] = $arr[$i]; $arr[$i] = $tmp; } } //返回最终结果 return $arr; }  3.</div>
 
   
   <footer>
@@ -93,17 +91,13 @@ function selectSort($arr) { //双重循环完成，外层控制轮数，内层�
   </header>
 
   
-  <div class="summary">###vim批量查找替换
-当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
+  <div class="summary">vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
 全局替换:% s/XXX/YYY/g.
 对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.
 或指定行范围 替换::100, 102s/XXX/YYY/g.
 替换字符串中的&rdquo;/&rdquo; 用&rdquo;\&ldquo;转义，即用&rdquo;\/&ldquo;表示。
 查找在：中输入？ 或／ ，然后按n或N向后或向前查找
-####vi指令大全
-#####进入vi的命令
-vi filename: 打开或新建文件，并将光标置于第一行首 vi +n filename: 打开文件，并将光标置于第n行首 vi + filename: 打开文件，并将光标置于最后一行首 vi +/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  #####移动光标类命令
-h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl+p: 光标上移一行 j或Ctrl+n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n+: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  #####屏幕翻滚类命令</div>
+vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光标置于第一行首 vi +n filename: 打开文件，并将光标置于第n行首 vi + filename: 打开文件，并将光标置于最后一行首 vi +/pattern filename: 打开文件，并将光标置于第一个与pattern匹配的串处 vi -r filename: 在上次正用vi编辑时发生系统崩溃，恢复filename vi filename....filename: 打开多个文件，依次进行编辑  移动光标类命令 h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一个字符 Backspace: 光标左移一个字符 k或Ctrl+p: 光标上移一行 j或Ctrl+n: 光标下移一行 Enter: 光标下移一行 w或W : 光标右移一个字至字首 b或B : 光标左移一个字至字首 e或E : 光标右移一个字至字尾 ): 光标移至句尾 (: 光标移至句首 }: 光标移至段落开头 {: 光标移至段落结尾 nG: 光标移至第n行首 n+: 光标下移n行 n-: 光标上移n行 n$: 光标移至第n行尾 H: 光标移至屏幕顶行 M: 光标移至屏幕中间行 L: 光标移至屏幕最后行 0: 光标移至当前行首 $: 光标移至当前行尾  屏幕翻滚类命令 Ctrl+u: 向文件首翻半屏 Ctrl+d: 向文件尾翻半屏 Ctrl+f: 向文件尾翻一屏 Ctrl＋b: 向文件首翻一屏 nz: 将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。  插入文本类命令 i: 在光标前 I: 在当前行首 a: 光标后 A: 在当前行尾 o: 在当前行之下新开一行 O: 在当前行之上新开一行 r: 替换当前字符 R: 替换当前字符及其后的字符，直至按ESC键 s: 从当前光标位置处开始，以输入的文本替代指定数目的字符 S: 删除指定数目的行，并以所输入文本代替之 ncw或nCW: 修改指定数目的字 nCC: 修改指定数目的行  删除命令 ndw或ndW: 删除光标处开始及其后的n-1个字 do: 删至行首 d$: 删至行尾 ndd: 删除当前行及其后n-1行 x或X: 删除一个字符，x删除光标后的，而X删除光标前的 Ctrl+u: 删除输入方式下所输入的文本  搜索及替换命令 /pattern: 从光标开始处向文件尾搜索pattern ?</div>
 
   
   <footer>
@@ -137,7 +131,7 @@ h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一�
       
       <a href="https://cwangtf.github.io/tags/" class="list-group-item">Tags</a>
       
-      <a href="https://cwangtf.github.io/" class="list-group-item">静晓晨曦的博客</a>
+      <a href="https://cwangtf.github.io/" class="list-group-item">icodego</a>
       
     </div>
   </section>
@@ -173,11 +167,7 @@ h: 光标左移一个字符 l: 光标右移一个字符 space: 光标右移一�
 
     <footer class="l-footer">
       <div class="container">
-        <p><span class="h-logo">&copy; 静晓晨曦的博客</span></p>
-        <aside>
-          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
-          <p><a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
-        </aside>
+        <p><span class="h-logo">&copy;2018 icodego</span></p>
       </div>
     </footer>
 
