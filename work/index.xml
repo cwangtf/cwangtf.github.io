@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on icodego</title>
+    <link>https://cwangtf.github.io/work/</link>
+    <description>Recent content in Works on icodego</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 30 Jun 2018 19:52:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://cwangtf.github.io/work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP与Java通用AES加密解密算法</title>
+      <link>https://cwangtf.github.io/work/cryptaes/</link>
+      <pubDate>Sat, 30 Jun 2018 19:52:46 +0800</pubDate>
+      
+      <guid>https://cwangtf.github.io/work/cryptaes/</guid>
+      <description>PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题
+AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到
+下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下
+PHP代码： &amp;lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = &#39;&#39;; protected $iv = &#39;&#39;; public function set_cipher($cipher) { $this-&amp;gt;cipher = $cipher; } public function set_mode($mode) { $this-&amp;gt;mode = $mode; } public function set_iv($iv) { $this-&amp;gt;iv = $iv; } public function set_key($key) { $this-&amp;gt;secret_key = $key; } public function require_pkcs5() { $this-&amp;gt;pad_method = &#39;pkcs5&#39;; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&amp;gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .</description>
+    </item>
+    
+  </channel>
+</rss>

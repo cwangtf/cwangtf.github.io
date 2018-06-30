@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta name="generator" content="Hugo 0.42.1" />
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://cwangtf.github.io/tags/index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://cwangtf.github.io/tags/java/index.xml">
 
-<link rel="canonical" href="https://cwangtf.github.io/tags/">
+<link rel="canonical" href="https://cwangtf.github.io/tags/java/">
 
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Tags - icodego</title>
+    <title>Java - icodego</title>
     
     <link href="https://cwangtf.github.io/css/styles.css" rel="stylesheet">
     
@@ -51,28 +51,44 @@
 <div class="row">
   <div class="col-md-8">
 
+    
     <header class="page-header">
-      <h1>Tags</h1>
+      <h1>Java</h1>
     </header>
+    
 
-    <section class="panel panel-default">
-      <div class="list-group">
-        
-        
-        <a href="https://cwangtf.github.io/tags/java" class="list-group-item">java <span class="badge">1</span></a>
-        
-        <a href="https://cwangtf.github.io/tags/linux" class="list-group-item">linux <span class="badge">1</span></a>
-        
-        <a href="https://cwangtf.github.io/tags/php" class="list-group-item">php <span class="badge">2</span></a>
-        
-        <a href="https://cwangtf.github.io/tags/vim" class="list-group-item">vim <span class="badge">1</span></a>
-        
-        <a href="https://cwangtf.github.io/tags/%E7%AE%97%E6%B3%95" class="list-group-item">算法 <span class="badge">2</span></a>
-        
-      </div>
-    </section>
+    <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-30T19:52:46JST">Jun 30, 2018</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://cwangtf.github.io/work/">work</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://cwangtf.github.io/work/cryptaes/">PHP与Java通用AES加密解密算法</a></h2>
+  </header>
+
+  
+  <div class="summary">PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题
+AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到
+下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下
+PHP代码： &lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = ''; protected $iv = ''; public function set_cipher($cipher) { $this-&gt;cipher = $cipher; } public function set_mode($mode) { $this-&gt;mode = $mode; } public function set_iv($iv) { $this-&gt;iv = $iv; } public function set_key($key) { $this-&gt;secret_key = $key; } public function require_pkcs5() { $this-&gt;pad_method = 'pkcs5'; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .</div>
+
+  
+  <footer>
+    <a href="https://cwangtf.github.io/work/cryptaes/" title="PHP与Java通用AES加密解密算法">Read More…</a>
+  </footer>
+  
+</article>
+</li>
+      
+    </ul>
+
+    
+
+
   </div>
-
   <div class="col-md-4">
     
 <aside class="l-sidebar">

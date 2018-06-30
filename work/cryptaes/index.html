@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.42.1" />
+
+
+
+<link rel="canonical" href="https://cwangtf.github.io/work/cryptaes/">
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>PHP与Java通用AES加密解密算法 - icodego</title>
+    
+<meta name="description" content="PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下PHP代码： &amp;lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = &#39;&#39;; protected $iv = &#39;&#39;; public function set_cipher($cipher) { $this-&amp;gt;cipher = $cipher; } public function set_mode($mode) { $this-&amp;gt;mode = $mode; } public function set_iv($iv) { $this-&amp;gt;iv = $iv; } public function set_key($key) { $this-&amp;gt;secret_key = $key; } public function require_pkcs5() { $this-&amp;gt;pad_method = &#39;pkcs5&#39;; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&amp;gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .">
+
+<meta property="og:title" content="PHP与Java通用AES加密解密算法 - icodego">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cwangtf.github.io/work/cryptaes/">
+<meta property="og:image" content="https://cwangtf.github.io/images/default.png">
+<meta property="og:site_name" content="icodego">
+<meta property="og:description" content="PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下PHP代码： &amp;lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = &#39;&#39;; protected $iv = &#39;&#39;; public function set_cipher($cipher) { $this-&amp;gt;cipher = $cipher; } public function set_mode($mode) { $this-&amp;gt;mode = $mode; } public function set_iv($iv) { $this-&amp;gt;iv = $iv; } public function set_key($key) { $this-&amp;gt;secret_key = $key; } public function require_pkcs5() { $this-&amp;gt;pad_method = &#39;pkcs5&#39;; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&amp;gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="icodego">
+<meta name="twitter:url" content="https://cwangtf.github.io/work/cryptaes/">
+<meta name="twitter:title" content="PHP与Java通用AES加密解密算法 - icodego">
+<meta name="twitter:description" content="PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下PHP代码： &amp;lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = &#39;&#39;; protected $iv = &#39;&#39;; public function set_cipher($cipher) { $this-&amp;gt;cipher = $cipher; } public function set_mode($mode) { $this-&amp;gt;mode = $mode; } public function set_iv($iv) { $this-&amp;gt;iv = $iv; } public function set_key($key) { $this-&amp;gt;secret_key = $key; } public function require_pkcs5() { $this-&amp;gt;pad_method = &#39;pkcs5&#39;; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&amp;gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .">
+<meta name="twitter:image" content="https://cwangtf.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https://cwangtf.github.io/"
+    },
+    "headline": "PHP与Java通用AES加密解密算法 - icodego",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://cwangtf.github.io/images/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2018-06-30T19:52:46JST",
+    "dateModified": "2018-06-30T19:52:46JST",
+    "author": {
+      "@type": "Person",
+      "name": "icodego"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "icodego",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cwangtf.github.io/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题
+AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到
+下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下
+PHP代码： &lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = ''; protected $iv = ''; public function set_cipher($cipher) { $this-&gt;cipher = $cipher; } public function set_mode($mode) { $this-&gt;mode = $mode; } public function set_iv($iv) { $this-&gt;iv = $iv; } public function set_key($key) { $this-&gt;secret_key = $key; } public function require_pkcs5() { $this-&gt;pad_method = 'pkcs5'; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ ."
+  }
+</script>
+
+
+    <link href="https://cwangtf.github.io/css/styles.css" rel="stylesheet">
+    
+
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://cwangtf.github.io/">icodego</a>
+          </div>
+
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://cwangtf.github.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://cwangtf.github.io/work/" itemprop="url"><span itemprop="title">work</span></a></li>
+        
+        <li class="active">PHP与Java通用AES加密解密算法</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-30T19:52:46JST">Jun 30, 2018</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://cwangtf.github.io/work/">work</a></li>
+      
+    </ul>
+
+    <h1 class="title">PHP与Java通用AES加密解密算法</h1>
+  </header>
+
+  
+
+  <div class="article-body"><nav>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#php代码">PHP代码：</a></li>
+<li><a href="#java代码">Java代码：</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<p>最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题</p>
+
+<p>AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到</p>
+
+<p>下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下</p>
+
+<h6 id="php代码">PHP代码：</h6>
+
+<pre><code>&lt;?php
+class CryptAES
+{
+    protected $cipher = MCRYPT_RIJNDAEL_128;
+    protected $mode = MCRYPT_MODE_ECB;
+    protected $pad_method = NULL;
+    protected $secret_key = '';
+    protected $iv = '';
+ 
+    public function set_cipher($cipher)
+    {
+        $this-&gt;cipher = $cipher;
+    }
+ 
+    public function set_mode($mode)
+    {
+        $this-&gt;mode = $mode;
+    }
+ 
+    public function set_iv($iv)
+    {
+        $this-&gt;iv = $iv;
+    }
+ 
+    public function set_key($key)
+    {
+        $this-&gt;secret_key = $key;
+    }
+ 
+    public function require_pkcs5()
+    {
+        $this-&gt;pad_method = 'pkcs5';
+    }
+ 
+    protected function pad_or_unpad($str, $ext)
+    {
+        if ( is_null($this-&gt;pad_method) )
+        {
+            return $str;
+        }
+        else
+        {
+            $func_name = __CLASS__ . '::' . $this-&gt;pad_method . '_' . $ext . 'pad';
+            if ( is_callable($func_name) )
+            {
+                $size = mcrypt_get_block_size($this-&gt;cipher, $this-&gt;mode);
+                return call_user_func($func_name, $str, $size);
+            }
+        }
+        return $str;
+    }
+ 
+    protected function pad($str)
+    {
+        return $this-&gt;pad_or_unpad($str, '');
+    }
+ 
+    protected function unpad($str)
+    {
+        return $this-&gt;pad_or_unpad($str, 'un');
+    }
+ 
+    public function encrypt($str)
+    {
+        $str = $this-&gt;pad($str);
+        $td = mcrypt_module_open($this-&gt;cipher, '', $this-&gt;mode, '');
+ 
+        if ( empty($this-&gt;iv) )
+        {
+            $iv = @mcrypt_create_iv(mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
+        }
+        else
+        {
+            $iv = $this-&gt;iv;
+        }
+ 
+        mcrypt_generic_init($td, $this-&gt;secret_key, $iv);
+        $cyper_text = mcrypt_generic($td, $str);
+        $rt=base64_encode($cyper_text);
+        //$rt = bin2hex($cyper_text);
+        mcrypt_generic_deinit($td);
+        mcrypt_module_close($td);
+ 
+        return $rt;
+    }
+ 
+    public function decrypt($str){
+        $td = mcrypt_module_open($this-&gt;cipher, '', $this-&gt;mode, '');
+ 
+        if ( empty($this-&gt;iv) )
+        {
+            $iv = @mcrypt_create_iv(mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
+        }
+        else
+        {
+            $iv = $this-&gt;iv;
+        }
+ 
+        mcrypt_generic_init($td, $this-&gt;secret_key, $iv);
+        //$decrypted_text = mdecrypt_generic($td, self::hex2bin($str));
+        $decrypted_text = mdecrypt_generic($td, base64_decode($str));
+        $rt = $decrypted_text;
+        mcrypt_generic_deinit($td);
+        mcrypt_module_close($td);
+ 
+        return $this-&gt;unpad($rt);
+    }
+ 
+    public static function hex2bin($hexdata) {
+        $bindata = '';
+        $length = strlen($hexdata);
+        for ($i=0; $i amp;&lt; $length; $i += 2)
+        {
+            $bindata .= chr(hexdec(substr($hexdata, $i, 2)));
+        }
+        return $bindata;
+    }
+ 
+    public static function pkcs5_pad($text, $blocksize)
+    {
+        $pad = $blocksize - (strlen($text) % $blocksize);
+        return $text . str_repeat(chr($pad), $pad);
+    }
+ 
+    public static function pkcs5_unpad($text)
+    {
+        $pad = ord($text{strlen($text) - 1});
+        if ($pad &gt; strlen($text)) return false;
+        if (strspn($text, chr($pad), strlen($text) - $pad) != $pad) return false;
+        return substr($text, 0, -1 * $pad);
+    }
+}
+ 
+$keyStr = 'UITN25LMUQC436IM';
+$plainText = 'this is a string will be AES_Encrypt';
+ 
+$aes = new CryptAES();
+$aes-&gt;set_key($keyStr);
+$aes-&gt;require_pkcs5();
+$encText = $aes-&gt;encrypt($plainText);
+$decString = $aes-&gt;decrypt($encText);
+ 
+echo $encText,&quot;n&quot;,$decString;
+ 
+?&gt;
+</code></pre>
+
+<p>运行结果：<br />
+fhTD0NNIzv4jUEhJuC1htFFXJ/4S/rL6tDCJPiNvJ8mVLHWOD0HWweuxHynxoZf9<br />
+this is a string will be AES_Encrypt</p>
+
+<h6 id="java代码">Java代码：</h6>
+
+<pre><code>import java.security.Key; 
+import javax.crypto.Cipher; 
+import javax.crypto.spec.SecretKeySpec; 
+ 
+import org.apache.commons.codec.binary.Base64;
+  
+public class CryptAES { 
+  
+    private static final String AESTYPE =&quot;AES/ECB/PKCS5Padding&quot;; 
+ 
+    public static String AES_Encrypt(String keyStr, String plainText) { 
+        byte[] encrypt = null; 
+        try{ 
+            Key key = generateKey(keyStr); 
+            Cipher cipher = Cipher.getInstance(AESTYPE); 
+            cipher.init(Cipher.ENCRYPT_MODE, key); 
+            encrypt = cipher.doFinal(plainText.getBytes());     
+        }catch(Exception e){ 
+            e.printStackTrace(); 
+        }
+        return new String(Base64.encodeBase64(encrypt)); 
+    } 
+ 
+    public static String AES_Decrypt(String keyStr, String encryptData) {
+        byte[] decrypt = null; 
+        try{ 
+            Key key = generateKey(keyStr); 
+            Cipher cipher = Cipher.getInstance(AESTYPE); 
+            cipher.init(Cipher.DECRYPT_MODE, key); 
+            decrypt = cipher.doFinal(Base64.decodeBase64(encryptData)); 
+        }catch(Exception e){ 
+            e.printStackTrace(); 
+        } 
+        return new String(decrypt).trim(); 
+    } 
+ 
+    private static Key generateKey(String key)throws Exception{ 
+        try{            
+            SecretKeySpec keySpec = new SecretKeySpec(key.getBytes(), &quot;AES&quot;); 
+            return keySpec; 
+        }catch(Exception e){ 
+            e.printStackTrace(); 
+            throw e; 
+        } 
+ 
+    } 
+ 
+    public static void main(String[] args) { 
+         
+        String keyStr = &quot;UITN25LMUQC436IM&quot;;  
+ 
+        String plainText = &quot;this is a string will be AES_Encrypt&quot;;
+         
+        String encText = AES_Encrypt(keyStr, plainText);
+        String decString = AES_Decrypt(keyStr, encText); 
+         
+        System.out.println(encText); 
+        System.out.println(decString); 
+ 
+    } 
+}
+</code></pre>
+
+<p>运行结果：<br />
+fhTD0NNIzv4jUEhJuC1htFFXJ/4S/rL6tDCJPiNvJ8mVLHWOD0HWweuxHynxoZf9<br />
+this is a string will be AES_Encrypt</p>
+</div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://cwangtf.github.io/categories/%E7%AE%97%E6%B3%95/">算法</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">TAGS</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://cwangtf.github.io/tags/php/">PHP</a></li>
+          
+          <li><a href="https://cwangtf.github.io/tags/java/">Java</a></li>
+          
+          <li><a href="https://cwangtf.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://cwangtf.github.io/work/cryptaes/" class="list-group-item">PHP与Java通用AES加密解密算法</a>
+      
+      <a href="https://cwangtf.github.io/php-alg-sort/" class="list-group-item">PHP实现四种基本排序算法</a>
+      
+      <a href="https://cwangtf.github.io/linux-vim-replace/" class="list-group-item">vim 批量查找替换</a>
+      
+      <a href="https://cwangtf.github.io/categories/" class="list-group-item">Categories</a>
+      
+      <a href="https://cwangtf.github.io/tags/java/" class="list-group-item">Java</a>
+      
+      <a href="https://cwangtf.github.io/tags/linux/" class="list-group-item">Linux</a>
+      
+      <a href="https://cwangtf.github.io/categories/linux/" class="list-group-item">Linux</a>
+      
+      <a href="https://cwangtf.github.io/tags/php/" class="list-group-item">Php</a>
+      
+      <a href="https://cwangtf.github.io/categories/php/" class="list-group-item">Php</a>
+      
+      <a href="https://cwangtf.github.io/tags/" class="list-group-item">Tags</a>
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://cwangtf.github.io/categories/linux" class="list-group-item">linux</a>
+      
+      <a href="https://cwangtf.github.io/categories/php" class="list-group-item">php</a>
+      
+      <a href="https://cwangtf.github.io/categories/%E7%AE%97%E6%B3%95" class="list-group-item">算法</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://cwangtf.github.io/tags/php" class="list-group-item">php</a>
+      
+      <a href="https://cwangtf.github.io/tags/%E7%AE%97%E6%B3%95" class="list-group-item">算法</a>
+      
+      <a href="https://cwangtf.github.io/tags/java" class="list-group-item">java</a>
+      
+      <a href="https://cwangtf.github.io/tags/linux" class="list-group-item">linux</a>
+      
+      <a href="https://cwangtf.github.io/tags/vim" class="list-group-item">vim</a>
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p><span class="h-logo">&copy;2018 icodego</span></p>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+
