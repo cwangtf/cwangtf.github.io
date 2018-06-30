@@ -66,10 +66,10 @@
   </header>
 
   
-  <div class="summary">PHP代码： Java代码：        最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题
+  <div class="summary">最近项目中遇到与第三方对接业务，涉及到签名与密码加密AES算法，而两方用的语言不一样，一方是PHP，另一方是Java，对接过程中遇到了算法不一致的问题
 AES指高级加密标准（Advanced Encryption Standard）,是当前最流行的一种密码算法，在web应用开发，特别是对外提供接口时经常会用到
 下面是查询资料及对接过程中找到可行的一套PHP与Java通用的AES加密解密算法，Mark一下
-PHP代码： &lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = ''; protected $iv = ''; public function set_cipher($cipher) { $this-&gt;cipher = $cipher; } public function set_mode($mode) { $this-&gt;mode = $mode; } public function set_iv($iv) { $this-&gt;iv = $iv; } public function set_key($key) { $this-&gt;secret_key = $key; } public function require_pkcs5() { $this-&gt;pad_method = 'pkcs5'; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .</div>
+ PHP代码：  &lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; protected $mode = MCRYPT_MODE_ECB; protected $pad_method = NULL; protected $secret_key = ''; protected $iv = ''; public function set_cipher($cipher) { $this-&gt;cipher = $cipher; } public function set_mode($mode) { $this-&gt;mode = $mode; } public function set_iv($iv) { $this-&gt;iv = $iv; } public function set_key($key) { $this-&gt;secret_key = $key; } public function require_pkcs5() { $this-&gt;pad_method = 'pkcs5'; } protected function pad_or_unpad($str, $ext) { if ( is_null($this-&gt;pad_method) ) { return $str; } else { $func_name = __CLASS__ .</div>
 
   
   <footer>
@@ -83,10 +83,10 @@ PHP代码： &lt;?php class CryptAES { protected $cipher = MCRYPT_RIJNDAEL_128; 
   <header>
     <ul class="p-facts">
       <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-27T23:02:24JST">Jun 27, 2018</time></li>
-      
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://cwangtf.github.io/study/">study</a></li>
       
     </ul>
-    <h2 class="title"><a href="https://cwangtf.github.io/php-alg-sort/">PHP实现四种基本排序算法</a></h2>
+    <h2 class="title"><a href="https://cwangtf.github.io/study/php-alg-sort/">PHP实现四种基本排序算法</a></h2>
   </header>
 
   
@@ -98,7 +98,7 @@ function selectSort($arr) { //双重循环完成，外层控制轮数，内层�
 
   
   <footer>
-    <a href="https://cwangtf.github.io/php-alg-sort/" title="PHP实现四种基本排序算法">Read More…</a>
+    <a href="https://cwangtf.github.io/study/php-alg-sort/" title="PHP实现四种基本排序算法">Read More…</a>
   </footer>
   
 </article>
@@ -108,10 +108,10 @@ function selectSort($arr) { //双重循环完成，外层控制轮数，内层�
   <header>
     <ul class="p-facts">
       <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-26T23:04:56JST">Jun 26, 2018</time></li>
-      
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://cwangtf.github.io/study/">study</a></li>
       
     </ul>
-    <h2 class="title"><a href="https://cwangtf.github.io/linux-vim-replace/">vim 批量查找替换</a></h2>
+    <h2 class="title"><a href="https://cwangtf.github.io/study/linux-vim-replace/">vim 批量查找替换</a></h2>
   </header>
 
   
@@ -125,7 +125,7 @@ vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光�
 
   
   <footer>
-    <a href="https://cwangtf.github.io/linux-vim-replace/" title="vim 批量查找替换">Read More…</a>
+    <a href="https://cwangtf.github.io/study/linux-vim-replace/" title="vim 批量查找替换">Read More…</a>
   </footer>
   
 </article>
@@ -149,9 +149,9 @@ vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光�
       
       <a href="https://cwangtf.github.io/work/cryptaes/" class="list-group-item">PHP与Java通用AES加密解密算法</a>
       
-      <a href="https://cwangtf.github.io/php-alg-sort/" class="list-group-item">PHP实现四种基本排序算法</a>
+      <a href="https://cwangtf.github.io/study/php-alg-sort/" class="list-group-item">PHP实现四种基本排序算法</a>
       
-      <a href="https://cwangtf.github.io/linux-vim-replace/" class="list-group-item">vim 批量查找替换</a>
+      <a href="https://cwangtf.github.io/study/linux-vim-replace/" class="list-group-item">vim 批量查找替换</a>
       
       <a href="https://cwangtf.github.io/categories/" class="list-group-item">Categories</a>
       
@@ -165,7 +165,7 @@ vi指令大全 进入vi的命令 vi filename: 打开或新建文件，并将光�
       
       <a href="https://cwangtf.github.io/categories/php/" class="list-group-item">Php</a>
       
-      <a href="https://cwangtf.github.io/tags/" class="list-group-item">Tags</a>
+      <a href="https://cwangtf.github.io/study/" class="list-group-item">Studies</a>
       
     </div>
   </section>

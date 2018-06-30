@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta name="generator" content="Hugo 0.42.1" />
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="https://cwangtf.github.io/tags/vim/index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://cwangtf.github.io/study/index.xml">
 
-<link rel="canonical" href="https://cwangtf.github.io/tags/vim/">
+<link rel="canonical" href="https://cwangtf.github.io/study/">
 
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <title>Vim - icodego</title>
+    <title>Studies - icodego</title>
     
     <link href="https://cwangtf.github.io/css/styles.css" rel="stylesheet">
     
@@ -53,11 +53,36 @@
 
     
     <header class="page-header">
-      <h1>Vim</h1>
+      <h1>Studies</h1>
     </header>
     
 
     <ul class="p-articles">
+      
+      <li><article class="li">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-06-27T23:02:24JST">Jun 27, 2018</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://cwangtf.github.io/study/">study</a></li>
+      
+    </ul>
+    <h2 class="title"><a href="https://cwangtf.github.io/study/php-alg-sort/">PHP实现四种基本排序算法</a></h2>
+  </header>
+
+  
+  <div class="summary">1.冒泡排序 思路分析：在要排序的一组数中，对当前还未排好的序列，从前往后对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即，每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。
+代码实现：
+$arr=array(1,43,54,62,21,66,32,78,36,76,39); function bubbleSort($arr) { $len=count($arr); //该层循环控制 需要冒泡的轮数 for($i=1;$i&lt;$len;$i++) { //该层循环用来控制每轮 冒出一个数 需要比较的次数 for($k=0;$k&lt;$len-$i;$k++) { if($arr[$k]&gt;$arr[$k+1]) { $tmp=$arr[$k+1]; $arr[$k+1]=$arr[$k]; $arr[$k]=$tmp; } } } return $arr; }  2.选择排序 思路分析：在要排序的一组数中，选出最小的一个数与第一个位置的数交换。然后在剩下的数当中再找最小的与第二个位置的数交换，如此循环到倒数第二个数和最后一个数比较为止。
+代码实现：
+function selectSort($arr) { //双重循环完成，外层控制轮数，内层控制比较次数 $len=count($arr); for($i=0; $i&lt;$len-1; $i++) { //先假设最小的值的位置 $p = $i; for($j=$i+1; $j&lt;$len; $j++) { //$arr[$p] 是当前已知的最小值 if($arr[$p] &gt; $arr[$j]) { //比较，发现更小的,记录下最小值的位置；并且在下次比较时采用已知的最小值进行比较。 $p = $j; } } //已经确定了当前的最小值的位置，保存到$p中。如果发现最小值的位置与当前假设的位置$i不同，则位置互换即可。 if($p != $i) { $tmp = $arr[$p]; $arr[$p] = $arr[$i]; $arr[$i] = $tmp; } } //返回最终结果 return $arr; }  3.</div>
+
+  
+  <footer>
+    <a href="https://cwangtf.github.io/study/php-alg-sort/" title="PHP实现四种基本排序算法">Read More…</a>
+  </footer>
+  
+</article>
+</li>
       
       <li><article class="li">
   <header>

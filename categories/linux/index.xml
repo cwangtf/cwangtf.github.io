@@ -13,10 +13,10 @@
     
     <item>
       <title>vim 批量查找替换</title>
-      <link>https://cwangtf.github.io/linux-vim-replace/</link>
+      <link>https://cwangtf.github.io/study/linux-vim-replace/</link>
       <pubDate>Tue, 26 Jun 2018 23:04:56 +0800</pubDate>
       
-      <guid>https://cwangtf.github.io/linux-vim-replace/</guid>
+      <guid>https://cwangtf.github.io/study/linux-vim-replace/</guid>
       <description>vim批量查找替换 当前行进行替换:s/XXX/YYY/gXXX是需要替换的字符串,YYY是替换后的字符串。
 全局替换:% s/XXX/YYY/g.
 对指定部分进行替换用V进入visual模式,再进行:s/XXX/YYY/g.
